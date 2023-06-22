@@ -20,8 +20,8 @@ const createStudent = async (req, res) => {
         major: req.body.major,
     })
     try {
-        const newBlog = await blog.save();
-        res.status(201).json(newBlog);
+        const newStudent = await student.save();
+        res.status(201).json(newStudent);
     } catch (err) {
         res.status(400).json({ message: err.message });
     }
